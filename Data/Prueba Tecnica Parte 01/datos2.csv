@@ -1,0 +1,9 @@
+Viewport;200;250
+Rectangle; 1;1;10;10
+Rectangle; 15;15;50;50
+Rectangle; 25;80;85;90
+Elipse; 25;25;40;40
+Rectangle; 35;200;80;250
+Rectangle; 35;140;80;190
+Rectangle; 35;100;80;130
+Elipse; 90;80;160;190
