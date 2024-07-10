@@ -46,8 +46,8 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
-        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_DcuOutput>D:\Compilado\Dcu\GaussSoft</DCC_DcuOutput>
+        <DCC_ExeOutput>D:\Compilado\Obj\GaussSoft</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
         <DCC_N>false</DCC_N>
         <DCC_S>false</DCC_S>
@@ -58,6 +58,8 @@
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <SanitizedProjectName>Prueba_Tecnica_Parte_01</SanitizedProjectName>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>JvNet;RTLFixer;vclwinx;DataSnapServer;fmx;emshosting;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;FireDACCommonDriver;appanalytics;IndyProtocols;vclx;PackageBtrieve;IndyIPClient;dbxcds;vcledge;bindcompvclwinx;FmxTeeUI;emsedge;bindcompfmx;DBXFirebirdDriver;JvBands;inetdb;JvAppFrm;ibmonitor;FireDACSqliteDriver;DbxClientDriver;FireDACASADriver;Tee;soapmidas;JclVcl;OrpheusDBDR;vclactnband;TeeUI;fmxFireDAC;dbexpress;Jcl;JvManagedThreads;FireDACInfxDriver;LcdDisplay;PowerPDFDR;DBXMySQLDriver;VclSmp;inet;DataSnapCommon;JvPascalInterpreter;AsyncProDR;vcltouch;fmxase;JvPluginSystem;DBXOdbcDriver;JvDB;dbrtl;JvTimeFramework;FireDACDBXDriver;FireDACOracleDriver;DCPdelphiXE10;fmxdae;TeeDB;FireDACMSAccDriver;JvCustom;CustomIPTransport;FireDACMSSQLDriver;JvSystem;LockBox3DR;DataSnapIndy10ServerTransport;JclDeveloperTools;JvControls;DataSnapConnectors;vcldsnap;DBXInterBaseDriver;JvCrypt;FireDACMongoDBDriver;JvJans;JvMM;IndySystem;InfoBackgroundWorker;JvWizards;OrpheusDR;FireDACTDataDriver;JvGlobus;vcldb;ibxbindings;SynEditDR;JclContainers;JvPageComps;IWBootstrap4D11;vclFireDAC;JvCore;bindcomp;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;IndyCore;RESTBackendComponents;xhExportDsgn270;bindcompdbx;rtl;FireDACMySQLDriver;FireDACADSDriver;RESTComponents;DBXSqliteDriver;vcl;IndyIPServer;dsnapxml;dsnapcon;DataSnapClient;DataSnapProviderClient;adortl;JvDotNetCtrls;JvHMI;DBXSybaseASEDriver;Intraweb_15_D11;JvRuntimeDesign;DBXDb2Driver;JvXPCtrls;vclimg;DataSnapFireDAC;emsclientfiredac;FireDACPgDriver;FireDAC;FireDACDSDriver;inetdbxpress;xmlrtl;tethering;JvStdCtrls;ibxpress;JvDlgs;JvDocking;JvPrintPreview;dsnap;ChatGptWizard;JvCmp;bindcompvcl;CloudService;DBXSybaseASADriver;DBXOracleDriver;FireDACDb2Driver;DBXInformixDriver;IWBootstrapD11;vclib;fmxobj;DataSnapNativeClient;FMXTee;bindcompvclsmp;DatasnapConnectorsFreePascal;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
@@ -84,6 +86,8 @@
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -102,6 +106,7 @@
             <Form>FrMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Utils\uListData.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -122,9 +127,13 @@
                 <Source>
                     <Source Name="MainSource">Prueba_Tecnica_Parte_01.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
-                <DeployFile LocalName="Win32\Debug\Prueba_Tecnica_Parte_01.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="D:\Compilado\Obj\GaussSoft\Prueba_Tecnica_Parte_01.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Prueba_Tecnica_Parte_01.exe</RemoteName>
                         <Overwrite>true</Overwrite>

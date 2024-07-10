@@ -18,9 +18,7 @@ object FrMain: TFrMain
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitLeft = 392
-    ExplicitTop = 184
-    ExplicitWidth = 185
+    ExplicitWidth = 721
     object BtnLoadFile: TSpeedButton
       Left = 1
       Top = 1
@@ -39,15 +37,13 @@ object FrMain: TFrMain
     Height = 410
     Align = alClient
     TabOrder = 1
-    ExplicitLeft = 520
-    ExplicitTop = 152
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 721
+    ExplicitHeight = 401
     object Image1: TImage
       Left = 3
       Top = 4
-      Width = 105
-      Height = 105
+      Width = 200
+      Height = 250
     end
   end
 end

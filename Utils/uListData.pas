@@ -40,7 +40,7 @@ Type
       Property Error : TStringList Read FError;
       procedure Restart;
       Procedure SetData(Const pLine : Integer; Const pData : String);
-      Procedure Paint2Canvas(Const pImage : TImage);
+      Procedure Paint2Canvas(Var pImage : TImage);
       procedure AfterConstruction; override;
       procedure BeforeDestruction; override;
   End;
@@ -119,7 +119,7 @@ Begin
   End;
 End;
 
-Procedure TListData.Paint2Canvas(Const pImage : TImage);
+Procedure TListData.Paint2Canvas(Var pImage : TImage);
 Var
   lI : Integer;
 Begin
@@ -132,10 +132,6 @@ Begin
   pImage.Canvas.Pen.Color := clGreen;
   For lI := 0 To FItems.Count - 1 Do
   Begin
-    If pImage.Width < FItems[lI].FValue03 Then
-      pImage.Width := FItems[lI].FValue03;
-    If pImage.Height < FItems[lI].FValue04 Then
-      pImage.Height := FItems[lI].FValue04;
     Case FItems[lI].FType___ Of
       TTypeData.TD_Viewport  : Begin
                                  pImage.Width := FItems[lI].Value01;
