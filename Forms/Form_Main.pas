@@ -51,8 +51,8 @@ Function TFrMain.Validate : Boolean;
 Begin
   Result := FFile.Text.ToUpper.Contains(';'                ) And
             FFile.Text.ToUpper.Contains('Viewport'.ToUpper ) And
-            FFile.Text.ToUpper.Contains('Rectangle'.ToUpper) And
-            FFile.Text.ToUpper.Contains('Elipse'.ToUpper   );
+            (FFile.Text.ToUpper.Contains('Rectangle'.ToUpper) Or
+             FFile.Text.ToUpper.Contains('Ellipse'.ToUpper   ));
   If Not Result Then
     ShowMessage('La estructura del archivo no esta correcta, por favor verifique su contenido');
 

@@ -1,0 +1,13 @@
+Viewport; 350; 300
+Rectangle; 20; 80; 50; 140
+Rectangle; 55; 60; 135; 200
+Rectangle; 55; 25; 215; 55
+Rectangle; 65; 70; 120; 80
+Ellipse; 65; 85; 125; 145
+Ellipse; 85; 100; 115; 130
+Rectangle; 140; 60; 205; 70
+Ellipse; 145; 80; 205; 140
+Ellipse; 165; 95; 195; 125
+Rectangle; 220; 80; 250; 140
+Rectangle; 75; 160; 195; 185
+Rectangle; 55; 205; 215; 225
